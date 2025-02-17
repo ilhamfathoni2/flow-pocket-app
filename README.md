@@ -17,9 +17,7 @@
 │   │   └── 📂 images
 │   ├── 📂 components
 │   │   ├── 📂 charts
-│   │   │   ├── LineChart.tsx
-│   │   │   ├── PieChart.tsx
-│   │   │   └── BarChart.tsx
+│   │   │   └── TrxLineChart.tsx
 │   │   ├── 📂 forms
 │   │   │   └── Form.tsx
 │   │   └── 📂 ui
@@ -83,6 +81,12 @@ Clone the repository and install dependencies:
 git clone https://github.com/ilhamfathoni2/flow-pocket-app.git
 cd flow-pocket-app
 yarn install
+```
+
+## 🎯 For using font assets
+```sh
+1. yarn global add react-native-asset
+2. yarn react-native-asset
 ```
 
 ## 🎯 Running the Project
