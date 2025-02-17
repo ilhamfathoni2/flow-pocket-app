@@ -10,7 +10,7 @@ import { useIsFocused } from '@react-navigation/native';
 // Import Screens
 import HomeScreen from '../screens/Home/HomeScreen';
 import TrxHistory from '../screens/TrxHistory/TrxHistory';
-import Menu from '../screens/Menu/Menu';
+import Menu from '../screens/Menu/MenuScreen';
 import CardSetting from '../screens/CardSetting/CardSetting';
 
 // Import Aset Ikon

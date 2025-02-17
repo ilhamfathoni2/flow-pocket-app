@@ -3,7 +3,7 @@ import {RootStackParamList} from './types';
 import HomeScreen from '../screens/Home/HomeScreen';
 import SplashScreen from '../screens/SplashScreen/SplashScreen';
 import TrxHistory from '../screens/TrxHistory/TrxHistory';
-import Menu from '../screens/Menu/Menu';
+import Menu from '../screens/Menu/MenuScreen';
 import BottomTabNavigator from './BottomTabNavigator';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
