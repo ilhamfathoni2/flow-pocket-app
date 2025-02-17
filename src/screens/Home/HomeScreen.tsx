@@ -12,13 +12,13 @@ const HomeScreen = () => {
       <XStack
         paddingInline={16}
         paddingBlock={16}
-        justify={'space-between'}
+        justify='space-between'
         items={'center'}>
         <YStack>
-          <Text fontSize={24} color={colors.black} style={fonts.poppinsMedium}>
+          <Text fontSize={24} color="black" fontWeight={500}>
             Flow Pocket
           </Text>
-          <Text fontSize={12} color={colors.black} style={fonts.poppinsMedium}>
+          <Text fontSize={12} color="black" fontWeight={500}>
             Manage Money, Control Life
           </Text>
         </YStack>
@@ -26,7 +26,7 @@ const HomeScreen = () => {
           paddingBlock={13}
           paddingInline={13}
           rounded={16}
-          bg={colors.darkGray}>
+          bg="$grayCs">
           <Image
             source={{
               uri: require('../../assets/images/plus.png'),

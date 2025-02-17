@@ -1,11 +1,4 @@
-import {
-  Image,
-  ScrollView,
-  Text,
-  View,
-  XStack,
-  YStack,
-} from 'tamagui';
+import {Image, ScrollView, Text, View, XStack, YStack} from 'tamagui';
 import fonts from '../ui/fonts';
 import colors from '../../constants/colors';
 
@@ -51,13 +44,29 @@ const ListTransaction = () => {
 
   return (
     <YStack px={16}>
-      <Text my={16} fontSize={16} color={colors.black} style={fonts.poppinsMedium}>
+      <Text
+        my={16}
+        fontSize={16}
+        color={colors.black}
+        style={fonts.poppinsMedium}>
         Total Transaction
       </Text>
 
       <ScrollView mb={500} showsVerticalScrollIndicator={false}>
         <XStack justify="space-between" items="center">
-          <View bg={colors.lightRed} rounded={24} px={16} py={16} width={'48%'}>
+          <View
+            bg="$lightRed"
+            rounded={24}
+            px={16}
+            py={16}
+            width={'48%'}
+            style={{
+              shadowColor: colors.black,
+              shadowRadius: 8,
+              shadowOpacity: 0.5,
+              shadowOffset: {width: 0, height: 5},
+              elevation: 0.8,
+            }}>
             <XStack justify="space-between">
               <YStack>
                 <Text
@@ -89,7 +98,19 @@ const ListTransaction = () => {
               </View>
             </XStack>
           </View>
-          <View bg={colors.green} rounded={24} px={16} py={16} width={'48%'}>
+          <View
+            bg="$green"
+            rounded={24}
+            px={16}
+            py={16}
+            width={'48%'}
+            style={{
+              shadowColor: colors.black,
+              shadowRadius: 8,
+              shadowOpacity: 0.5,
+              shadowOffset: {width: 0, height: 5},
+              elevation: 0.8,
+            }}>
             <XStack justify="space-between">
               <YStack>
                 <Text
@@ -123,7 +144,11 @@ const ListTransaction = () => {
           </View>
         </XStack>
 
-        <Text my={16} fontSize={16} color={colors.black} style={fonts.poppinsMedium}>
+        <Text
+          my={16}
+          fontSize={16}
+          color={colors.black}
+          style={fonts.poppinsMedium}>
           Your Last Transaction
         </Text>
 
@@ -141,12 +166,14 @@ const ListTransaction = () => {
               shadowColor: colors.black,
               shadowRadius: 8,
               shadowOpacity: 0.5,
-              shadowOffset: { width: 0, height: 5 },
+              shadowOffset: {width: 0, height: 5},
               elevation: 0.8,
-            }}
-            >
+            }}>
             <XStack width="40%" items="center" gap={16}>
-              <View bg={colors.whiteBg} rounded={50} p={9}>
+              <View
+                bg={item.category === 'expense' ? '$lightRed' : '$greenLight'}
+                rounded={50}
+                p={9}>
                 <Image
                   source={{
                     uri:
@@ -160,7 +187,10 @@ const ListTransaction = () => {
                 />
               </View>
               <YStack>
-                <Text fontSize={16} color={colors.black} style={fonts.poppinsSemiBold}>
+                <Text
+                  fontSize={16}
+                  color={colors.black}
+                  style={fonts.poppinsSemiBold}>
                   {item.name}
                 </Text>
                 <Text
