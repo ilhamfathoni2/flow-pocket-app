@@ -1,66 +1,65 @@
 # Project Structure
-
-flow-pocket-app
-├── android
-├── ios
-├── build-app
-├── env
-│   ├── dev
-│   │   └── api.dev.ts
-│   ├── prod
-│   │   └── api.prod.ts
-│   └── api.ts
-├── src
-│   ├── assets
-│   │   ├── fonts
-│   │   ├── icons
-│   │   └── images
-│   ├── components
-│   │   ├── charts
+```
+📦 flow-pocket-app
+├── 📂 android
+├── 📂 ios
+├── 📂 build-app
+├── 📂 env
+│   ├── 📂 dev
+│   │   └── 📂 api.dev.ts
+│   ├── 📂 prod
+│   │   └── 📂 api.prod.ts
+│   ├── 📂 api.ts
+├── 📂 src
+│   ├── 📂 assets
+│   │   ├── 📂 fonts
+│   │   ├── 📂 icons
+│   │   └── 📂 images
+│   ├── 📂 components
+│   │   ├── 📂 charts
 │   │   │   ├── LineChart.tsx
 │   │   │   ├── PieChart.tsx
 │   │   │   └── BarChart.tsx
-│   │   ├── forms
+│   │   ├── 📂 forms
 │   │   │   └── Form.tsx
-│   │   └── ui
+│   │   └── 📂 ui
 │   │       └── SomeUI.tsx
-│   ├── configs
+│   ├── 📂 configs
 │   │   └── otherConfig.ts
-│   ├── screens
-│   │   ├── Home
+│   ├── 📂 screens
+│   │   ├── 📂 Home
 │   │   │   └── HomeScreen.tsx
-│   │   ├── TrxHistory
+│   │   ├── 📂 TrxHistory
 │   │   │   └── TrxHistoryScreen.tsx
-│   │   ├── SplashScreen
+│   │   ├── 📂 SplashScreen
 │   │   │   └── SplashScreen.tsx
-│   │   ├── Menu
+│   │   ├── 📂 Menu
 │   │   │   └── MenuScreen.tsx
-│   ├── store
+│   ├── 📂 store
 │   │   └── index.ts
-│   ├── services
+│   ├── 📂 services
 │   │   └── api.ts
-│   ├── utils
+│   ├── 📂 utils
 │   │   └── formatCurrency.ts
-│   ├── navigation
-│   │   ├── AppNavigator.tsx
-│   │   ├── BottomTabNavigator.tsx
-│   │   ├── RootStack.tsx
-│   │   └── types.tsx
-├── App.tsx
-├── index.tsx
-├── tamagui.config.ts
-├── prepare-env.js
-├── move-apk.js
-├── .eslintrc.js
-├── .gitignore
-├── .prettierrc
-├── babel.config.js
-├── metro.config.js
-├── package.json
-├── README.md
-└── tsconfig.json
-
-
+│   ├── 📂 navigation
+│   │   ├── 📂 AppNavigator.tsx
+│   │   ├── 📂 BottomTabNavigator.tsx
+│   │   ├── 📂 RootStack.tsx
+│   │   └── 📂 types.tsx
+├── 📜 App.tsx
+├── 📜 index.tsx
+├── 📜 tamagui.config.ts
+├── 📜 prepare-env.js
+├── 📜 move-apk.js
+├── 📜 .eslintrc.js
+├── 📜 .gitignore
+├── 📜 .prettierrc
+├── 📜 babel.config.js
+├── 📜 metro.config.js
+├── 📜 package.json
+├── 📜 README.md
+└── 📜 tsconfig.json
+```
 # Flow Pocket - Project Setup
 
 Welcome to the **Flow Pocket** project! This guide will help you set up and run the project smoothly.
