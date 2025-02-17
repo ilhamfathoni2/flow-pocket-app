@@ -83,10 +83,20 @@ cd flow-pocket-app
 yarn install
 ```
 
-## 🎯 For using font assets
+## 🎯 Using font assets
+- Install react-native-asset
 ```sh
-1. yarn global add react-native-asset
-2. yarn react-native-asset
+yarn global add react-native-asset
+```
+- Path in ./src/assets/fonts/ and add **react-native.config.js** in root projects
+```sh
+module.exports = {
+    assets: ['./src/assets/fonts/'],
+};
+```
+- Run
+```sh
+yarn react-native-asset
 ```
 
 ## 🎯 Running the Project
