@@ -1,79 +1,150 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Project Structure
 
-# Getting Started
+📦 flow-pocket-app
+├── 📂 android
+├── 📂 ios
+├── 📂 build-app
+├── 📂 env
+│   ├── 📂 dev
+│   │   └── 📂 api.dev.ts
+│   ├── 📂 prod
+│   │   └── 📂 api.prod.ts
+│   ├── 📂 api.ts
+├── 📂 src
+│   ├── 📂 assets
+│   │   ├── 📂 fonts
+│   │   ├── 📂 icons
+│   │   └── 📂 images
+│   ├── 📂 components
+│   │   ├── 📂 charts
+│   │   │   ├── LineChart.tsx
+│   │   │   ├── PieChart.tsx
+│   │   │   └── BarChart.tsx
+│   │   ├── 📂 forms
+│   │   │   └── Form.tsx
+│   │   └── 📂 ui
+│   │       └── SomeUI.tsx
+│   ├── 📂 configs
+│   │   └── otherConfig.ts
+│   ├── 📂 screens
+│   │   ├── 📂 Home
+│   │   │   └── HomeScreen.tsx
+│   │   ├── 📂 TrxHistory
+│   │   │   └── TrxHistoryScreen.tsx
+│   │   ├── 📂 SplashScreen
+│   │   │   └── SplashScreen.tsx
+│   │   ├── 📂 Menu
+│   │   │   └── MenuScreen.tsx
+│   ├── 📂 store
+│   │   └── index.ts
+│   ├── 📂 services
+│   │   └── api.ts
+│   ├── 📂 utils
+│   │   └── formatCurrency.ts
+│   ├── 📂 navigation
+│   │   ├── 📂 AppNavigator.tsx
+│   │   ├── 📂 BottomTabNavigator.tsx
+│   │   ├── 📂 RootStack.tsx
+│   │   └── 📂 types.tsx
+├── 📜 App.tsx
+├── 📜 index.tsx
+├── 📜 tamagui.config.ts
+├── 📜 prepare-env.js
+├── 📜 move-apk.js
+├── 📜 .eslintrc.js
+├── 📜 .gitignore
+├── 📜 .prettierrc
+├── 📜 babel.config.js
+├── 📜 metro.config.js
+├── 📜 package.json
+├── 📜 README.md
+└── 📜 tsconfig.json
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+# Flow Pocket - Project Setup
 
-## Step 1: Start the Metro Server
+Welcome to the **Flow Pocket** project! This guide will help you set up and run the project smoothly.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## 🚀 Prerequisites
+Before you begin, ensure you have the following installed:
+- **React Native 0.76**
+- **Node.js** (18 or Latest LTS recommended) → [Download here](https://nodejs.org/)
+- **Yarn** (Recommended over npm) → [Install here](https://yarnpkg.com/)
+- **Android Studio** (for Android development) → [Download here](https://developer.android.com/studio)
+- **Xcode** (for iOS development, macOS only) → [Download here](https://developer.apple.com/xcode/)
+- **CocoaPods** (for iOS dependencies, macOS only)
+  ```sh
+  sudo gem install cocoapods or from brew
+  ```
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## 📦 Installation
+Clone the repository and install dependencies:
 
-```bash
-# using npm
-npm start
+```sh
+git clone https://github.com/ilhamfathoni2/flow-pocket-app.git
+cd flow-pocket-app
+yarn install
+```
 
-# OR using Yarn
+## 🎯 Running the Project
+
+### 1️⃣ Start Metro Bundler
+Run Metro, the JavaScript bundler for React Native:
+```sh
 yarn start
 ```
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
+### 2️⃣ Run on Android
+Ensure an emulator or physical device is connected, then execute:
+```sh
 yarn android
 ```
 
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
+### 3️⃣ Run on iOS (macOS only)
+For iOS, install dependencies and run the project:
+```sh
+cd ios && pod install && cd ..
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## 🛠 Troubleshooting
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### Metro Bundler Issues
+If you encounter errors, try:
+```sh
+yarn start --reset-cache
+```
 
-## Step 3: Modifying your App
+### Android Build Issues
+Ensure **Android SDK** is installed and run:
+```sh
+cd android && ./gradlew clean && cd ..
+```
 
-Now that you have successfully run the app, let's modify it.
+### iOS Build Issues
+Check if **Xcode Command Line Tools** are installed:
+```sh
+sudo xcode-select --install
+```
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## 🔥 Useful Commands
+- **Clean cache:**
+  ```sh
+  yarn cache clean
+  ```
+- **Run ESLint:**
+  ```sh
+  yarn lint
+  ```
+- **Format code with Prettier:**
+  ```sh
+  yarn format
+  ```
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## 📄 License
+This project is licensed under the **MIT License**.
 
-## Congratulations! :tada:
+---
 
-You've successfully run and modified your React Native App. :partying_face:
+Happy coding! 🚀
 
-### Now what?
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
