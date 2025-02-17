@@ -101,6 +101,16 @@ yarn react-native-asset
 
 ## 🎯 Running the Project
 
+### Select Environment
+Run for dev environment:
+```sh
+yarn dev
+```
+Run for prod environment:
+```sh
+yarn prod
+```
+
 ### 1️⃣ Start Metro Bundler
 Run Metro, the JavaScript bundler for React Native:
 ```sh
